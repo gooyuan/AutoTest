@@ -23,18 +23,10 @@ public class TestMainActivity {
             e.printStackTrace();
         }
 
-        driver.findElement(By.name("录制")).click();
-        sleep(2000);
-        driver.findElement(By.name("编辑")).click();
-        sleep(2000);
-        driver.findElement(By.name("素材")).click();
-        sleep(2000);
-        driver.findElement(By.name("播放")).click();
-        sleep(2000);
-        driver.findElement(By.name("转码")).click();
-
-        String result = driver.findElement(By.id("com.android.calculator2:id/formula")).getText();
-        System.out.println(result);
+        if (driver != null){
+            driver.findElementById("com.godian.sav:id/ntb").click();
+            sleep(2000);
+        }
 
         driver.quit();
     }
